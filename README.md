@@ -1,6 +1,10 @@
 # NITracker
 Unspamming NITC Emails: A lost and found query addressal platform
 
+##CHECK MAIN BRANCH FOR SEEING THE ENTIRE MERGED CODE
+
+SUBREPOS
+
 link to backend (straPy) :https://github.com/gautham227/Code_init-2023.git 
 
 link to frontend: https://github.com/AmalkrishnaAS/chakra-ui-starter.git 
