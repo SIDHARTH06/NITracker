@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "found_tags",
+  "info": {
+    "singularName": "found-tag",
+    "pluralName": "found-tags",
+    "displayName": "found_tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "found_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::found-item.found-item",
+      "inversedBy": "found_tags"
+    },
+    "tag": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "claims",
+  "info": {
+    "singularName": "claim",
+    "pluralName": "claims",
+    "displayName": "claim"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "found_item": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::found-item.found-item"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}

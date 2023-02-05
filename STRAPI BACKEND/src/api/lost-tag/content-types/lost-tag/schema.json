@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lost_tags",
+  "info": {
+    "singularName": "lost-tag",
+    "pluralName": "lost-tags",
+    "displayName": "lost_tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lost_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lost-item.lost-item",
+      "inversedBy": "lost_tags"
+    },
+    "tag": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

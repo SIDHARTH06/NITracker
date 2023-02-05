@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lost_items",
+  "info": {
+    "singularName": "lost-item",
+    "pluralName": "lost-items",
+    "displayName": "lost_item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "resolved": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "lost_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lost-tag.lost-tag",
+      "mappedBy": "lost_items"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "found_items",
+  "info": {
+    "singularName": "found-item",
+    "pluralName": "found-items",
+    "displayName": "found_item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "resolved": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "found_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::found-tag.found-tag",
+      "mappedBy": "found_items"
+    }
+  }
+}
